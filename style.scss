@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  body p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+
+  body {
+    font-family: "inter", sans-serif;
+    background-color: hsl(233, 47%, 7%);
+    color: #fff;
+  }
+}
+
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.statistics {
+  height: 53vh;
+  width: 70vw;
+  background-color: hsl(244, 38%, 16%);
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 0.9rem 0.9rem 0.9rem 0.9rem;
+
+  &__image {
+    min-width: 32vw;
+    background-color: hsl(277, 64%, 61%);
+    border-radius: 0 0.9rem 0.9rem 0;
+
+    .laptop {
+      object-fit: cover;
+      width: 100%;
+      mix-blend-mode: multiply;
+      opacity: 0.7;
+      min-height: 100%;
+
+    }
+  }
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7vh;
+    border-radius: 0.9rem 0 0 0.9rem;
+
+    &__head {
+      h1 {
+        padding: 0 3rem;
+      }
+
+      .insights {
+        color: hsl(277, 64%, 61%);
+      }
+    }
+
+    &__discovery {
+      margin: 0 0 0 3rem;
+
+      p {
+        font-family: "inter";
+        color: hsla(0, 0%, 100%, 0.6);
+        font-size: .9rem;
+        padding: 0 6rem 0 0;
+
+      }
+    }
+
+
+    &__footer {
+      display: flex;
+      flex-direction: row;
+      gap: 3vw;
+      padding: 0 3rem;
+
+      &__for__queries {
+        text-transform: uppercase;
+      }
+
+      h2 {
+        font-size: 1.1rem;
+      }
+
+      p {
+        text-transform: uppercase;
+        font-size: 0.6rem;
+        padding: 0.5rem 0 0 0;
+        color: hsla(0, 0%, 100%, 0.6);
+      }
+    }
+  }
+}
+
+// Media Query
+
+@media screen and (max-width:998px) {
+  .container {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .statistics {
+    flex-direction: column;
+    height: 100%;
+    width: 20rem;
+    gap: 5vh;
+
+    &__image {
+      border-radius: 0.9rem 0.9rem 0 0;
+    }
+
+    &__information {
+      text-align: center;
+      gap: 5vh;
+
+      &__head {
+        h1 {
+          padding: 0 1.3rem;
+          font-size: 1.8rem;
+        }
+      }
+
+      &__discovery {
+        margin: 0;
+
+        p {
+          padding: 0 3rem;
+          font-size: 1.1rem;
+        }
+      }
+
+      &__footer {
+        flex-direction: column;
+        gap: 5vh;
+        text-align: center;
+
+        h2 {
+          font-size: 1.5rem;
+          margin: 0;
+        }
+
+        p {
+          font-size: .7rem;
+          margin: 0 0;
+          padding: .2rem 0 0 0;
+        }
+      }
+    }
+  }
+}
